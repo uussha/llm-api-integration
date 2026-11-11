@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyBuddy — AI Chat</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand-mark">S</div>
+      <div><h1>StudyBuddy</h1><p>Your learning assistant</p></div>
+      <button id="new-chat" class="new-chat" type="button">＋ New chat</button>
+    </header>
+    <section class="chat-panel">
+      <div class="welcome" id="welcome">
+        <div class="welcome-icon">✦</div>
+        <h2>What would you like to learn?</h2>
+        <p>Ask a question, explore an idea, or work through a coding problem.</p>
+        <div class="suggestions">
+          <button class="suggestion" type="button">Explain how a REST API works</button>
+          <button class="suggestion" type="button">What is the difference between a list and a tuple in Python?</button>
+          <button class="suggestion" type="button">Help me understand RAG in simple words</button>
+        </div>
+      </div>
+      <div id="messages" class="messages" aria-live="polite"></div>
+      <div id="status" class="status" role="status"></div>
+      <form id="chat-form" class="composer">
+        <textarea id="message-input" rows="1" maxlength="12000" placeholder="Message StudyBuddy..." aria-label="Your message"></textarea>
+        <button id="send-button" type="submit" aria-label="Send message">↑</button>
+      </form>
+      <p class="disclaimer">AI can make mistakes. Check important information.</p>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
